@@ -10,7 +10,7 @@
     chosen {
         zmk,kscan = &kscan0;
         zmk,matrix_transform = &default_transform;
-        zmk,underglow = &led_strip;
+        // zmk,underglow = &led_strip;
     };
 
     default_transform: keymap_transform_0 {
@@ -31,7 +31,9 @@ RC(2,0) RC(2,1) RC(2,2) RC(2,3) RC(2,4) RC(2,5) RC(3,5)                   RC(3,6
 
     kscan0: kscan {
         compatible = "zmk,kscan-gpio-matrix";
-        label = "KSCAN";
+        // label = "KSCAN";
+        wakeup-source;
+
 
         diode-direction = "col2row";
         row-gpios
@@ -114,7 +116,7 @@ RC(2,0) RC(2,1) RC(2,2) RC(2,3) RC(2,4) RC(2,5) RC(3,5)                   RC(3,6
 
 &spi3 {
   compatible = "nordic,nrf-spim";
-  status = "okay";
+  status = "disabled"; // TODO should be ok
 
   pinctrl-0 = <&spi3_default>;
   pinctrl-1 = <&spi3_sleep>;
