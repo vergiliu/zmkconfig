@@ -4,7 +4,7 @@
 if SHIELD_HILLSIDE46_LEFT
 
 config ZMK_KEYBOARD_NAME
-    default "Hillside46"
+    default "keeb00"
 
 config ZMK_SPLIT_BLE_ROLE_CENTRAL
     default y
