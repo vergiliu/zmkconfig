@@ -2,8 +2,10 @@ file_format: "1"
 id: hillside46
 name: Hillside46
 type: shield
-url: https://github.com/mmccoyd/hillside/
-requires: [pro_micro]
+# url: https://github.com/mmccoyd/hillside/ # previous setup
+url: https://github.com/wannabecoffeenerd/hillside
+requires:
+  - pro_micro
 features:
   - keys
   - encoder
