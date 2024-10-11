@@ -16,16 +16,32 @@ endif
 config ZMK_USB
     default y
 
-
 config ZMK_DISPLAY
-    select LV_FONT_MONTSERRAT_26
+    select LV_FONT_MONTSERRAT_16
+    # LVGL_FONT_MONTSERRAT_26
+    # LVGL_FONT_MONTSERRAT_12
+    # ZMK_WIDGET_BATTERY_STATUS ...
 
 if ZMK_DISPLAY
 
+config ZMK_WIDGET_BATTERY_STATUS
+    default y
+
+config ZMK_WIDGET_LAYER_STATUS
+    default y
+
+config ZMK_WIDGET_BATTERY_STATUS_SHOW_PERCENTAGE
+    default y
+
+config ZMK_DISPLAY_STATUS_SCREEN_BUILT_IN
+    default y
+
+# CONFIG_ZMK_DISPLAY_WORK_QUEUE_SYSTEM=y
 config ZMK_DISPLAY_BLANK_ON_IDLE
   default n
 
-config SPI
+# TODO is this SPI or I2C
+config I2C
     default y
 
 config LV_Z_BITS_PER_PIXEL
@@ -33,6 +49,7 @@ config LV_Z_BITS_PER_PIXEL
 
 choice LV_COLOR_DEPTH
     default LV_COLOR_DEPTH_1
+
 endchoice
 
 if LVGL
@@ -59,32 +76,11 @@ config ZMK_RGB_UNDERGLOW
     select WS2812_STRIP
     select SPI
 
-config ZMK_DISPLAY
-    select LV_FONT_MONTSERRAT_26
-
 if ZMK_MOUSE
 
 config I2C
   default y
 
 endif # ZMK_MOUSE
-
-if LVGL
-
-config LV_Z_VDB_SIZE
-    default 64
-
-config LV_DPI_DEF
-    default 148
-
-config LV_Z_BITS_PER_PIXEL
-    default 1
-
-choice LV_COLOR_DEPTH
-    default LV_COLOR_DEPTH_1
-
-endchoice
-
-endif # LVGL
 
 endif # SHIELD_HILLSIDE_VIEW_LEFT || SHIELD_HILLSIDE_VIEW_RIGHT
