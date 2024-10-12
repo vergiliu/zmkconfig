@@ -72,13 +72,11 @@ endif # LVGL
 
 endif # SHIELD_HILLSIDE_VIEW_LEFT
 
-if SHIELD_HILLSIDE_VIEW_RIGHT
-    default "keeb01r"
-
-endif
-
 
 if  SHIELD_HILLSIDE_VIEW_RIGHT
+
+config ZMK_KEYBOARD_NAME
+    default "keeb01r"
 
 config ZMK_SPLIT_ROLE_CENTRAL
     default n
