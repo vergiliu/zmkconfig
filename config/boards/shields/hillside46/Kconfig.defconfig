@@ -2,12 +2,6 @@
 # SPDX-License-Identifier: MIT
 
 if SHIELD_HILLSIDE46_LEFT
-
-
-config I2C
-  default y
-
-
 config ZMK_KEYBOARD_NAME
     default "keeb01"
 
@@ -17,6 +11,12 @@ config ZMK_SPLIT_ROLE_CENTRAL
 config ZMK_SPLIT_BLE_ROLE_CENTRAL
     default y
 endif
+
+config I2C
+  default y
+
+config SPI
+  default y
 
 config ZMK_USB
     default y
@@ -92,10 +92,10 @@ config ZMK_RGB_UNDERGLOW
     select WS2812_STRIP
     select SPI
 
-if ZMK_MOUSE
-
 config I2C
   default y
 
-endif # ZMK_MOUSE
+config SPI
+  default y
+
 endif
