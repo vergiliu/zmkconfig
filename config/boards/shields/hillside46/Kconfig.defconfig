@@ -3,6 +3,11 @@
 
 if SHIELD_HILLSIDE46_LEFT
 
+
+config I2C
+  default y
+
+
 config ZMK_KEYBOARD_NAME
     default "keeb01"
 
@@ -67,7 +72,20 @@ endif # LVGL
 
 endif # SHIELD_HILLSIDE_VIEW_LEFT
 
-if SHIELD_HILLSIDE_VIEW_LEFT || SHIELD_HILLSIDE_VIEW_RIGHT
+if SHIELD_HILLSIDE_VIEW_RIGHT
+    default "keeb01r"
+
+endif
+
+
+if  SHIELD_HILLSIDE_VIEW_RIGHT
+
+config ZMK_SPLIT_ROLE_CENTRAL
+    default n
+
+config ZMK_SPLIT_BLE_ROLE_CENTRAL
+    default n
+endif
 
 config ZMK_SPLIT
     default y
@@ -82,6 +100,4 @@ config I2C
   default y
 
 endif # ZMK_MOUSE
-config ZMK_SPLIT_BLE_PERIPHERAL_COUNT
-    default 1
-endif # SHIELD_HILLSIDE_VIEW_LEFT || SHIELD_HILLSIDE_VIEW_RIGHT
+endif
