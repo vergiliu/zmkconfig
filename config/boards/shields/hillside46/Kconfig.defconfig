@@ -25,13 +25,13 @@ config ZMK_DISPLAY
 if ZMK_DISPLAY
 
 config ZMK_WIDGET_BATTERY_STATUS
-    default y
+    default n
 
 config ZMK_WIDGET_LAYER_STATUS
-    default y
+    default n
 
 config ZMK_WIDGET_BATTERY_STATUS_SHOW_PERCENTAGE
-    default y
+    default n
 
 # config ZMK_DISPLAY_STATUS_SCREEN_BUILT_IN
 #     default y
