@@ -4,7 +4,7 @@
 if SHIELD_HILLSIDE46_LEFT
 
 config ZMK_KEYBOARD_NAME
-    default "keeb00"
+    default "keeb01"
 
 config ZMK_SPLIT_ROLE_CENTRAL
     default y
@@ -47,10 +47,10 @@ config I2C
 config LV_Z_BITS_PER_PIXEL
     default 1
 
-choice LV_COLOR_DEPTH
-    default LV_COLOR_DEPTH_1
-
-endchoice
+# choice LV_COLOR_DEPTH
+#     default LV_COLOR_DEPTH_1
+#
+# endchoice
 
 if LVGL
 
