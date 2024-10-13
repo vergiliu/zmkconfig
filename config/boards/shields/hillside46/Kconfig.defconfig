@@ -8,9 +8,6 @@ if SHIELD_HILLSIDE46_LEFT
 config ZMK_KEYBOARD_NAME
     default "keeb01"
 
-# config ZMK_SPLIT_ROLE_CENTRAL
-#     default y
-#
 config ZMK_SPLIT_BLE_ROLE_CENTRAL
     default y
 
@@ -20,7 +17,6 @@ config I2C
 config SPI
     default y
 
-# TODO ZMK_USB?
 config ZMK_BLE
     default y
 
@@ -37,13 +33,13 @@ config ZMK_DISPLAY
 if ZMK_DISPLAY
 
 config ZMK_WIDGET_BATTERY_STATUS
-    default n
+    default y
 
 config ZMK_WIDGET_LAYER_STATUS
-    default n
+    default y
 
 config ZMK_WIDGET_BATTERY_STATUS_SHOW_PERCENTAGE
-    default n
+    default y
 
 # config ZMK_DISPLAY_STATUS_SCREEN_BUILT_IN
 #     default y
