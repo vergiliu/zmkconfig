@@ -34,13 +34,11 @@ if ZMK_DISPLAY
 
 config ZMK_WIDGET_BATTERY_STATUS
     default y
-
 config ZMK_WIDGET_LAYER_STATUS
     default y
 
 config ZMK_WIDGET_BATTERY_STATUS_SHOW_PERCENTAGE
     default y
-
 # config ZMK_DISPLAY_STATUS_SCREEN_BUILT_IN
 #     default y
 # CONFIG_ZMK_DISPLAY_WORK_QUEUE_SYSTEM=y
@@ -77,23 +75,26 @@ if  SHIELD_HILLSIDE_VIEW_RIGHT
 config ZMK_KEYBOARD_NAME
     default "keeb01r"
 
-config ZMK_SPLIT_ROLE_CENTRAL
-    default n
-
 config ZMK_SPLIT_BLE_ROLE_CENTRAL
     default n
 
-config ZMK_SPLIT
+config I2C
+    default y
+
+config SPI
+    default y
+
+config ZMK_BLE
     default y
 
 config ZMK_RGB_UNDERGLOW
     select WS2812_STRIP
     select SPI
 
-config I2C
-  default y
-
-config SPI
-  default y
+# config ZMK_SPLIT_BLE_ROLE_CENTRAL
+#     default n
+#
+# config ZMK_SPLIT
+#     default y
 
 endif

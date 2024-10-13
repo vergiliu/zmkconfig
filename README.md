@@ -1,4 +1,7 @@
-# Hillside ZMK firmware
+### keymap
+https://nickcoutsos.github.io/keymap-editor/
+
+### Hillside ZMK firmware
 
 ![hillside](https://imgur.com/emWDXiT.png)
 [![Build](https://github.com/mmccoyd/zmk-config/actions/workflows/build.yml/badge.svg)](https://github.com/mmccoyd/zmk-config/actions/workflows/build.yml)
@@ -33,8 +36,6 @@ To build the firmware:
   you can modify the keymap.
 Your copies of the default Hillside keymaps are in:
 
-- [./config/hillside52.keymap](./config/hillside52.keymap)
-- [./config/hillside48.keymap](./config/hillside48.keymap)
 - [./config/hillside46.keymap](./config/hillside46.keymap)
 
 Modify those as needed. Pushing the change will trigger a build as above.
