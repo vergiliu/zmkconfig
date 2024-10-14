@@ -13,11 +13,11 @@
 };
 
 / {
-    chosen {
-        zmk,kscan = &kscan0;
-        zmk,physical-layout = &hsv_6col_layout;
-        zmk,underglow = &led_strip;
-    };
+  chosen: chosen {
+    zmk,kscan = &kscan0;
+    zmk,physical-layout = &hsv_6col_layout;
+    zmk,underglow = &led_strip;
+  };
 
     default_transform: keymap_transform_0 {
         compatible = "zmk,matrix-transform";

@@ -8,7 +8,6 @@ requires:
   - pro_micro
 features:
   - keys
-  - encoder
   - underglow
 siblings:
   - hillside46_left
