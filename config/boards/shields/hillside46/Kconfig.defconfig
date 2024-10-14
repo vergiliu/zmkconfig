@@ -6,7 +6,7 @@
 if SHIELD_HILLSIDE46_LEFT
 
 config ZMK_KEYBOARD_NAME
-    default "keeb02"
+    default "keeb03"
 
 config ZMK_SPLIT_ROLE_CENTRAL
     default y
@@ -70,7 +70,7 @@ endif # SHIELD_HILLSIDE_VIEW_LEFT
 if  SHIELD_HILLSIDE_VIEW_RIGHT
 
 config ZMK_KEYBOARD_NAME
-    default "keeb02r"
+    default "keeb03r"
 
 config ZMK_SPLIT_BLE_ROLE_CENTRAL
     default n
