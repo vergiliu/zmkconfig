@@ -42,15 +42,6 @@ manifest:
 #    - name: zmk-hid-io
 #      remote: badjeff
 #      revision: main
-#    - name: zmk-split-peripheral-input-relay
-#      remote: badjeff
-#      revision: main
-#    - name: zmk-split-peripheral-output-relay
-#      remote: badjeff
-#      revision: main
-#    - name: zmk-split-peripheral-bonding-tweak
-#      remote: badjeff
-#      revision: main
 #    - name: zmk-kscan-blackout
 #      remote: badjeff
 #      revision: main

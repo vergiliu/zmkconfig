@@ -6,7 +6,7 @@
 if SHIELD_HILLSIDE46_LEFT
 
 config ZMK_KEYBOARD_NAME
-    default "keeb01"
+    default "keeb02"
 
 config ZMK_SPLIT_BLE_ROLE_CENTRAL
     default y
@@ -23,6 +23,7 @@ config ZMK_BLE
 config ZMK_RGB_UNDERGLOW
     select WS2812_STRIP
     select SPI
+    select SSD1306
 
 config ZMK_DISPLAY
     select LV_FONT_MONTSERRAT_16
@@ -48,10 +49,9 @@ config ZMK_DISPLAY_BLANK_ON_IDLE
 config LV_Z_BITS_PER_PIXEL
     default 1
 
-# choice LV_COLOR_DEPTH
-#     default LV_COLOR_DEPTH_1
-#
-# endchoice
+choice LV_COLOR_DEPTH
+    default LV_COLOR_DEPTH_1
+endchoice
 
 if LVGL
 
@@ -73,7 +73,7 @@ endif # SHIELD_HILLSIDE_VIEW_LEFT
 if  SHIELD_HILLSIDE_VIEW_RIGHT
 
 config ZMK_KEYBOARD_NAME
-    default "keeb01r"
+    default "keeb02r"
 
 config ZMK_SPLIT_BLE_ROLE_CENTRAL
     default n
@@ -90,11 +90,12 @@ config ZMK_BLE
 config ZMK_RGB_UNDERGLOW
     select WS2812_STRIP
     select SPI
+    select SSD1306
 
-# config ZMK_SPLIT_BLE_ROLE_CENTRAL
-#     default n
-#
-# config ZMK_SPLIT
-#     default y
+config ZMK_SPLIT_BLE_ROLE_CENTRAL
+    default n
+
+config ZMK_SPLIT
+    default y
 
 endif
