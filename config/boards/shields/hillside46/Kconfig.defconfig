@@ -8,19 +8,13 @@ if SHIELD_HILLSIDE46_LEFT
 config ZMK_KEYBOARD_NAME
     default "keeb02"
 
-config ZMK_SPLIT_BLE_ROLE_CENTRAL
-    default y
 config ZMK_SPLIT_ROLE_CENTRAL
     default y
+
 config I2C
     default y
 
 config SPI
-    default y
-
-config ZMK_USB
-    default y
-config ZMK_BLE
     default y
 
 config ZMK_RGB_UNDERGLOW
@@ -87,12 +81,6 @@ config I2C
 config SPI
     default y
 
-config ZMK_BLE
-    default y
-
-config ZMK_USB
-    default y
-
 config ZMK_RGB_UNDERGLOW
     select WS2812_STRIP
     select SPI
@@ -100,10 +88,6 @@ config ZMK_RGB_UNDERGLOW
 config ZMK_SPLIT_ROLE_CENTRAL
     default n
 
-config ZMK_SPLIT_BLE_ROLE_CENTRAL
-    default n
-
-config ZMK_SPLIT
-    default y
+# config CONFIG_ZMK_SPLIT_BLE_CENTRAL_BATTERY_LEVEL_PROXY
 
 endif
