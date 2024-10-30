@@ -6,20 +6,20 @@
 if SHIELD_HILLSIDE46_LEFT
 
 config ZMK_KEYBOARD_NAME
-    default "keeb03"
+    default "keeb04"
 
 config ZMK_SPLIT_ROLE_CENTRAL
     default y
 
-config I2C
-    default y
-
-config SPI
-    default y
-
-config ZMK_RGB_UNDERGLOW
-    select WS2812_STRIP
-    select SPI
+# config I2C
+#     default n
+#
+# config SPI
+#     default n
+#
+# config ZMK_RGB_UNDERGLOW
+#     select WS2812_STRIP
+#     select SPI
 
 # config ZMK_DISPLAY
 #     select LV_FONT_MONTSERRAT_16
@@ -70,20 +70,20 @@ endif # SHIELD_HILLSIDE_VIEW_LEFT
 if  SHIELD_HILLSIDE_VIEW_RIGHT
 
 config ZMK_KEYBOARD_NAME
-    default "keeb03r"
+    default "keeb04r"
 
 config ZMK_SPLIT_BLE_ROLE_CENTRAL
     default n
 
 config I2C
-    default y
+    default n
 
 config SPI
-    default y
+    default n
 
-config ZMK_RGB_UNDERGLOW
-    select WS2812_STRIP
-    select SPI
+# config ZMK_RGB_UNDERGLOW
+#     select WS2812_STRIP
+#     select SPI
 
 config ZMK_SPLIT_ROLE_CENTRAL
     default n
